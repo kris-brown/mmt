@@ -1,9 +1,9 @@
-[error] sbt.librarymanagement.ResolveException: Error downloading mmt:mmt:19.0.0
+[error] sbt.librarymanagement.ResolveException: Error downloading org.scala-lang.modules:scala-parser-combinators_2.13:1.1.1
 [error]   Not found
 [error]   Not found
-[error]   not found: /Users/ksb/.ivy2/local/mmt/mmt/19.0.0/ivys/ivy.xml
-[error]   not found: https://repo1.maven.org/maven2/mmt/mmt/19.0.0/mmt-19.0.0.pom
-[error]   mmt.jar not found under https://github.com/UniFormal/MMT/releases/download/v19.0.0/
+[error]   not found: /Users/ksb/.ivy2/local/org.scala-lang.modules/scala-parser-combinators_2.13/1.1.1/ivys/ivy.xml
+[error]   not found: https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.13/1.1.1/scala-parser-combinators_2.13-1.1.1.pom
+[error]   No fallback URL found
 [error] 	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:246)
 [error] 	at lmcoursier.CoursierDependencyResolution.$anonfun$update$34(CoursierDependencyResolution.scala:215)
 [error] 	at scala.util.Either$LeftProjection.map(Either.scala:573)
@@ -34,9 +34,9 @@
 [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 [error] 	at java.base/java.lang.Thread.run(Thread.java:834)
-[error] (ssExtractDependencies) sbt.librarymanagement.ResolveException: Error downloading mmt:mmt:19.0.0
+[error] (ssExtractDependencies) sbt.librarymanagement.ResolveException: Error downloading org.scala-lang.modules:scala-parser-combinators_2.13:1.1.1
 [error]   Not found
 [error]   Not found
-[error]   not found: /Users/ksb/.ivy2/local/mmt/mmt/19.0.0/ivys/ivy.xml
-[error]   not found: https://repo1.maven.org/maven2/mmt/mmt/19.0.0/mmt-19.0.0.pom
-[error]   mmt.jar not found under https://github.com/UniFormal/MMT/releases/download/v19.0.0/
+[error]   not found: /Users/ksb/.ivy2/local/org.scala-lang.modules/scala-parser-combinators_2.13/1.1.1/ivys/ivy.xml
+[error]   not found: https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.13/1.1.1/scala-parser-combinators_2.13-1.1.1.pom
+[error]   No fallback URL found
