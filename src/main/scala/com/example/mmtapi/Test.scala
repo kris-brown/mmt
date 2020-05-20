@@ -1,7 +1,7 @@
 import java.io.File
 
 import info.kwarc.mmt.api.frontend.{ConsoleHandler, Controller}
-import info.kwarc.mmt.api.ontology.IsTheory
+import info.kwarc.mmt.api.ontology.{IsTheory, IsView, TheoryGraph}
 import info.kwarc.mmt.api.utils.FilePath
 
 object Test {
@@ -9,20 +9,27 @@ object Test {
     val ctrl = new Controller()
     // All logging goes to console
     ctrl.report.addHandler(ConsoleHandler)
-
-    val mmtArchiveHome = ctrl.getHome / "archives" / "MathHub" / "MMT"
-    ctrl.addArchive(mmtArchiveHome / "urtheories")
-
-    // The identifier "MMT/urtheories" is specified in "MMT/urtheories/META-INF/MANIFEST.MF"
-    // In general every archive specified its ID there.
-    val urtheoriesArchive = ctrl.backend.getArchive("MMT/urtheories").get
-    // The next two lines trigger processing of the whole archive and make the data
-    // available in ctrl.depstore, the dependency store - among others.
-    urtheoriesArchive.allContent
-    urtheoriesArchive.readRelational(FilePath("/"), ctrl, "rel")
-
-    // Get and print all individual ("inds") objects which are a theory
+    val root = new File("/Users/ksb/IdeaProjects/testmhub/MMT_archives/MMT/tutorial")
+    ctrl.addArchive(root)
+    val TUTORIALArchive = ctrl.backend.getArchive("MMT/TUTORIAL").get
+    TUTORIALArchive.allContent
+    TUTORIALArchive.readRelational(FilePath("/"), ctrl, "rel")
     val theories = ctrl.depstore.getInds(IsTheory)
+    val views = ctrl.depstore.getInds(IsView)
+    val tg = new TheoryGraph(ctrl.depstore)
+    val nodes = Set("Monoid", "NonGrpMon", "NatPlusTimes")
+    val Array(mon, npt, ngm) = tg.nodes.toArray.sortBy(x => x.last).filter(x => {nodes.contains(x.last)})
+    val edgesOutOfMonoid = tg.edgesFrom(mon)
+
+    println("Theories")
     theories foreach println
+    println("VIEWS")
+    views foreach println
+    println("Edges out of Monoid")
+    edgesOutOfMonoid foreach println
+
+    println("END")
+
+
   }
 }
