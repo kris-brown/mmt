@@ -1,0 +1,7 @@
+/Users/ksb/IdeaProjects/math/Test
+TEST
+Test
+A
+partial
+ideal
+20

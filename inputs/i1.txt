@@ -1,0 +1,6 @@
+/Users/ksb/IdeaProjects/math/MMT_archives/MMT/tutorial
+Tutorial
+Monoid
+partial
+ideal
+20
