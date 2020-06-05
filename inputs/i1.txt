@@ -1,4 +1,5 @@
-/Users/ksb/IdeaProjects/math/MMT_archives/MMT/tutorial
+/Users/ksb/IdeaProjects/math/Tutorial
+MMT/TUTORIAL
 Tutorial
 Monoid
 partial
